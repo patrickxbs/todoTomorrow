@@ -1,8 +1,8 @@
-package br.ufba.tomorrow.todoProject.controller;
+package br.ufba.tomorrow.todoProject.api.controllers;
 
-import br.ufba.tomorrow.todoProject.dto.UsuarioRequestDto;
-import br.ufba.tomorrow.todoProject.dto.UsuarioResponseDto;
-import br.ufba.tomorrow.todoProject.service.UsuarioService;
+import br.ufba.tomorrow.todoProject.api.dto.UsuarioRequestDto;
+import br.ufba.tomorrow.todoProject.api.dto.UsuarioResponseDto;
+import br.ufba.tomorrow.todoProject.domain.services.UsuarioService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;import org.springframework.web.bind.annotation.PostMapping;

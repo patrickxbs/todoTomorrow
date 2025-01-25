@@ -1,12 +1,12 @@
-package br.ufba.tomorrow.todoProject.service;
+package br.ufba.tomorrow.todoProject.domain.services;
 
-import br.ufba.tomorrow.todoProject.domain.Todo;
-import br.ufba.tomorrow.todoProject.domain.Usuario;
-import br.ufba.tomorrow.todoProject.domain.status.Estado;
-import br.ufba.tomorrow.todoProject.dto.TodoEstadoDto;
-import br.ufba.tomorrow.todoProject.dto.TodoRequestDto;
-import br.ufba.tomorrow.todoProject.dto.TodoResponseDto;
-import br.ufba.tomorrow.todoProject.dto.TodoUpdateDto;
+import br.ufba.tomorrow.todoProject.domain.entities.Todo;
+import br.ufba.tomorrow.todoProject.domain.entities.Usuario;
+import br.ufba.tomorrow.todoProject.domain.entities.Estado;
+import br.ufba.tomorrow.todoProject.api.dto.TodoEstadoDto;
+import br.ufba.tomorrow.todoProject.api.dto.TodoRequestDto;
+import br.ufba.tomorrow.todoProject.api.dto.TodoResponseDto;
+import br.ufba.tomorrow.todoProject.api.dto.TodoUpdateDto;
 import br.ufba.tomorrow.todoProject.repository.TodoRepository;
 import org.springframework.stereotype.Service;
 

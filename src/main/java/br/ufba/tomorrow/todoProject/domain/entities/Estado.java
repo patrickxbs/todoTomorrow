@@ -1,4 +1,4 @@
-package br.ufba.tomorrow.todoProject.domain.status;
+package br.ufba.tomorrow.todoProject.domain.entities;
 
 public enum Estado {
 

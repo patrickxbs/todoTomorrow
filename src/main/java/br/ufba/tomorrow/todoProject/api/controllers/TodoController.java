@@ -1,11 +1,11 @@
-package br.ufba.tomorrow.todoProject.controller;
+package br.ufba.tomorrow.todoProject.api.controllers;
 
-import br.ufba.tomorrow.todoProject.domain.status.Estado;
-import br.ufba.tomorrow.todoProject.dto.TodoEstadoDto;
-import br.ufba.tomorrow.todoProject.dto.TodoRequestDto;
-import br.ufba.tomorrow.todoProject.dto.TodoResponseDto;
-import br.ufba.tomorrow.todoProject.dto.TodoUpdateDto;
-import br.ufba.tomorrow.todoProject.service.TodoService;
+import br.ufba.tomorrow.todoProject.domain.entities.Estado;
+import br.ufba.tomorrow.todoProject.api.dto.TodoEstadoDto;
+import br.ufba.tomorrow.todoProject.api.dto.TodoRequestDto;
+import br.ufba.tomorrow.todoProject.api.dto.TodoResponseDto;
+import br.ufba.tomorrow.todoProject.api.dto.TodoUpdateDto;
+import br.ufba.tomorrow.todoProject.domain.services.TodoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,9 +1,8 @@
-package br.ufba.tomorrow.todoProject.domain;
+package br.ufba.tomorrow.todoProject.domain.entities;
 
-import br.ufba.tomorrow.todoProject.domain.status.Estado;
-import br.ufba.tomorrow.todoProject.dto.TodoEstadoDto;
-import br.ufba.tomorrow.todoProject.dto.TodoRequestDto;
-import br.ufba.tomorrow.todoProject.dto.TodoUpdateDto;
+import br.ufba.tomorrow.todoProject.api.dto.TodoEstadoDto;
+import br.ufba.tomorrow.todoProject.api.dto.TodoRequestDto;
+import br.ufba.tomorrow.todoProject.api.dto.TodoUpdateDto;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;

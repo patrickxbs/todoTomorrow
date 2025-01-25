@@ -1,29 +1,26 @@
-package br.ufba.tomorrow.todoProject.dto;
+package br.ufba.tomorrow.todoProject.api.dto;
 
-import br.ufba.tomorrow.todoProject.domain.Todo;
-import br.ufba.tomorrow.todoProject.domain.Usuario;
-import br.ufba.tomorrow.todoProject.domain.status.Estado;
+import br.ufba.tomorrow.todoProject.domain.entities.Estado;
 
 import java.time.LocalDate;
 
-public class TodoResponseDto {
+public class TodoUpdateDto {
 
     private long id;
     private String item;
     private LocalDate prazo;
     private Estado estado;
+    private LocalDate conclusao;
 
-    public TodoResponseDto() {
+    public TodoUpdateDto() {
     }
 
-    public TodoResponseDto(Todo todo) {
-        this.id = todo.getId();
-        this.item = todo.getItem();
-        this.prazo = todo.getPrazo();
-        this.estado = todo.getEstado();
-    }
-
-    public TodoResponseDto(Usuario usuario) {
+    public TodoUpdateDto(long id, String item, LocalDate prazo, Estado estado, LocalDate conclusao) {
+        this.id = id;
+        this.item = item;
+        this.prazo = prazo;
+        this.estado = estado;
+        this.conclusao = conclusao;
     }
 
     public long getId() {
@@ -56,5 +53,13 @@ public class TodoResponseDto {
 
     public void setEstado(Estado estado) {
         this.estado = estado;
+    }
+
+    public LocalDate getConclusao() {
+        return conclusao;
+    }
+
+    public void setConclusao(LocalDate conclusao) {
+        this.conclusao = conclusao;
     }
 }

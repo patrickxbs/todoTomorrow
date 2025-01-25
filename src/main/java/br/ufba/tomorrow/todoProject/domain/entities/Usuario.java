@@ -1,6 +1,6 @@
-package br.ufba.tomorrow.todoProject.domain;
+package br.ufba.tomorrow.todoProject.domain.entities;
 
-import br.ufba.tomorrow.todoProject.dto.UsuarioRequestDto;
+import br.ufba.tomorrow.todoProject.api.dto.UsuarioRequestDto;
 import jakarta.persistence.*;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package br.ufba.tomorrow.todoProject.filters;
 
-import br.ufba.tomorrow.todoProject.domain.Usuario;
-import br.ufba.tomorrow.todoProject.service.AuthenticationService;
+import br.ufba.tomorrow.todoProject.domain.entities.Usuario;
+import br.ufba.tomorrow.todoProject.domain.services.AuthenticationService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -19,23 +19,24 @@ import java.util.Collections;
 
 public class LoginFilter extends AbstractAuthenticationProcessingFilter {
 
-    public LoginFilter(String url, AuthenticationManager authenticationManager) {
+    public LoginFilter(String url, AuthenticationManager authManager){
         super(new AntPathRequestMatcher(url));
-        setAuthenticationManager(authenticationManager);
+        setAuthenticationManager(authManager);
     }
 
     @Override
-    public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)
+    public Authentication attemptAuthentication(HttpServletRequest req, HttpServletResponse res)
             throws AuthenticationException, IOException, ServletException {
-        Usuario usuario = new ObjectMapper()
-                .readValue(request.getInputStream(), Usuario.class);
+        Usuario usu = new ObjectMapper()
+                .readValue(req.getInputStream(), Usuario.class);
         return getAuthenticationManager().authenticate(new UsernamePasswordAuthenticationToken(
-                usuario.getEmail(), usuario.getSenha(), Collections.emptyList()));
+                usu.getEmail(), usu.getSenha(), Collections.emptyList()));
     }
 
-    protected void sucessfulAuthentication(HttpServletRequest request, HttpServletResponse response,
-                                           FilterChain chain, Authentication auth) throws IOException, ServletException{
-        AuthenticationService.addToken(response, auth.getName());
+    protected void successfulAuthentication(HttpServletRequest req, HttpServletResponse res,
+                                            FilterChain chain, Authentication auth)
+            throws IOException, ServletException {
+        AuthenticationService.addToken(res, auth.getName());
     }
 }
 

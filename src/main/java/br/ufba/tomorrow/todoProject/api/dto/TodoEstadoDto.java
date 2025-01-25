@@ -1,6 +1,6 @@
-package br.ufba.tomorrow.todoProject.dto;
+package br.ufba.tomorrow.todoProject.api.dto;
 
-import br.ufba.tomorrow.todoProject.domain.status.Estado;
+import br.ufba.tomorrow.todoProject.domain.entities.Estado;
 
 public class TodoEstadoDto {
 

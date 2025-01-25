@@ -1,8 +1,8 @@
-package br.ufba.tomorrow.todoProject.service;
+package br.ufba.tomorrow.todoProject.domain.services;
 
-import br.ufba.tomorrow.todoProject.domain.Usuario;
-import br.ufba.tomorrow.todoProject.dto.UsuarioRequestDto;
-import br.ufba.tomorrow.todoProject.dto.UsuarioResponseDto;
+import br.ufba.tomorrow.todoProject.domain.entities.Usuario;
+import br.ufba.tomorrow.todoProject.api.dto.UsuarioRequestDto;
+import br.ufba.tomorrow.todoProject.api.dto.UsuarioResponseDto;
 import br.ufba.tomorrow.todoProject.repository.UsuarioRepository;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.crypto.password.PasswordEncoder;

@@ -1,4 +1,4 @@
-package br.ufba.tomorrow.todoProject.service;
+package br.ufba.tomorrow.todoProject.domain.services;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
